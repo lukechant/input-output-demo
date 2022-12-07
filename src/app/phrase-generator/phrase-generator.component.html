@@ -1,6 +1,8 @@
-<p>phrase-generator works!</p>
-<app-phrase-button [generatedPhrase]="generatedPhrase"
-(phraseConcat)="phraseToDisplay($event)"
-></app-phrase-button>
-<p>{{ generatedPhrase }}</p>
-<!--  -->
+<section class="centre">
+  <app-phrase-button class="centre" [generatedPhrase]="generatedPhrase"
+  (phraseConcat)="phraseToDisplay($event)"
+  ></app-phrase-button>
+  <p class="phrase-box">{{ generatedPhrase }}</p>
+</section>
+
+
