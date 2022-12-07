@@ -15,6 +15,7 @@ export class PhraseGeneratorComponent implements OnInit {
   ngOnInit(): void {
     this.generatedPhrase = this.phraseGenerator();
   }
+
   phraseGenerator(): string {
     return `Some words`;
   }
@@ -22,6 +23,4 @@ export class PhraseGeneratorComponent implements OnInit {
   phraseToDisplay(phrase: string) {
     this.generatedPhrase = phrase;
   }
-
-
 }
