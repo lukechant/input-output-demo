@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PhraseGeneratorComponent } from './phrase-generator/phrase-generator.component';
+import { PhraseButtonComponent } from './phrase-button/phrase-button.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PhraseGeneratorComponent,
+    PhraseButtonComponent
   ],
   imports: [
     BrowserModule,
