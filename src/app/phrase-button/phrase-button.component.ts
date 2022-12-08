@@ -1,15 +1,13 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-phrase-button',
   templateUrl: './phrase-button.component.html',
-  styleUrls: ['./phrase-button.component.css']
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PhraseButtonComponent implements OnInit {
   @Input() generatedPhrase: string | undefined;
   @Output() phraseConcat: EventEmitter<string> = new EventEmitter<string>();
-
-
 
   constructor() { }
 
@@ -31,13 +29,10 @@ export class PhraseButtonComponent implements OnInit {
     return end[Math.floor(Math.random() * end.length)];
   }
 
-
-
   onClick() {
     const newStart = this.chooseStart();
     const newEnd = this.chooseEnd();
     this.generatedPhrase = `${newStart} ${this.generatedPhrase} ${newEnd}`;
     this.phraseConcat.emit(this.generatedPhrase);
   }
-
 }

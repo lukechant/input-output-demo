@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-phrase-generator',
   templateUrl: './phrase-generator.component.html',
-  styleUrls: ['./phrase-generator.component.css']
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PhraseGeneratorComponent implements OnInit {
 
