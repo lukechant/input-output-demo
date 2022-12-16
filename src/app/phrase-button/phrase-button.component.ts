@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output
 @Component({
   selector: 'app-phrase-button',
   templateUrl: './phrase-button.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class PhraseButtonComponent implements OnInit {
   @Input() generatedPhrase: string | undefined;
@@ -34,5 +34,10 @@ export class PhraseButtonComponent implements OnInit {
     const newEnd = this.chooseEnd();
     this.generatedPhrase = `${newStart} ${this.generatedPhrase} ${newEnd}`;
     this.phraseConcat.emit(this.generatedPhrase);
+  }
+
+  checkRender2() {
+    console.log('check render2');
+    return true;
   }
 }

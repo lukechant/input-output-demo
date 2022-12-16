@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-phrase-generator',
   templateUrl: './phrase-generator.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class PhraseGeneratorComponent implements OnInit {
 
@@ -22,5 +22,10 @@ export class PhraseGeneratorComponent implements OnInit {
 
   phraseToDisplay(phrase: string) {
     this.generatedPhrase = phrase;
+  }
+
+  checkRender1() {
+    console.log('check render1');
+    return true;
   }
 }
